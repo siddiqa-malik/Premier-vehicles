@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.svg';
@@ -7,6 +7,7 @@ const Navbar= () => {
  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentView, setCurrentView] = useState('Home');
+  const [isScrolled, setIsScrolled] = useState(false);
  
 
   const navigations = [
@@ -22,30 +23,40 @@ const Navbar= () => {
     setMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <header className="fixed top-0 left-0 w-full h-30 bg-transparent backdrop-blur-md   z-50 transition-all duration-300">
-        <div className="w-full max-full mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <header className={`fixed top-0 left-0 w-full h-24 md:h-30 backdrop-blur-md z-50 transition-all duration-300 ${isScrolled ? 'bg-orange-600 shadow-lg' : 'bg-transparent'}`}>
+        <div className="w-full max-full mx-auto h-full px-4 sm:px-5 lg:px-8 flex items-center justify-between gap-3">
           
           {/* Logo */}
           
-          <div className="flex min-w-0 items-center gap-6 lg:gap-12">
+          <div className="flex min-w-0 items-center gap-4 lg:gap-12">
             <div className="flex items-center gap-2">
               <Link to="/" className="flex items-center gap-2 transition-transform hover:scale-101">
-                <img src={logo} alt="Logo" className="w-[60px] h-[73.85px] " />
+                <img src={logo} alt="Logo" className="w-[52px] h-auto md:w-[60px]" />
               </Link>
             </div>
             </div>
             <div>
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex  items-center gap-8">
+            <nav className="hidden md:flex items-center gap-4 lg:gap-8">
               {navigations.map((nav) => {
                 const isActive = currentView === nav.id;
                 return (
                   <button
                     key={nav.id}
                     onClick={() => handleNavClick(nav.id)}
-                    className={`relative py-1 text-sm text-base tracking-wide transition-colors duration-200 cursor-pointer ${
+                    className={`relative py-1 text-sm lg:text-base tracking-wide whitespace-nowrap transition-colors duration-200 cursor-pointer ${
                       isActive 
                         ? 'border-b-2 border-white text-white' 
                         : '  hover:border-b-2 hover:border-white text-white/80 hover:text-white'
@@ -57,16 +68,16 @@ const Navbar= () => {
               })}
             </nav>
           </div>
-            <div>
+            <div className="flex items-center gap-2 sm:gap-3">
           {/* Core Utilities */}
-          <div className="flex items-center gap-1.5 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
             
         
 
           {/* language Placeholder button */}
             <button 
               
-              className="hidden sm:inline-flex px-6 py-2 text-white/80  hover:text-white   cursor-pointer border border-white/80 font-medium rounded-lg  hover:border-white  transition-colors"
+              className="hidden sm:inline-flex px-3 lg:px-6 py-2 text-white/80 hover:text-white cursor-pointer border border-white/80 font-medium rounded-lg hover:border-white transition-colors whitespace-nowrap"
             >
              اردو
             </button>
@@ -76,7 +87,7 @@ const Navbar= () => {
             {/* Profile Placeholder Icon */}
             <button 
               onClick={() => alert("Welcome to your Premier vehicles profile!")}
-              className="hidden px-3 py-2 sm:inline-flex p-2 text-white/80 hover:text-white   border border-white/80 rounded-lg font-medium cursor-pointer"
+              className="hidden px-3 py-2 sm:inline-flex text-white/80 hover:text-white border border-white/80 rounded-lg font-medium cursor-pointer whitespace-nowrap"
             >
               Login/Signup
             </button>
@@ -86,7 +97,7 @@ const Navbar= () => {
             {/* Mobile Drawer Trigger */}
             <button
               onClick={() => setMobileMenuOpen(prev => !prev)}
-              className="p-2 text-white hover:border-white md:hidden rounded-full hover:bg-slate-50 transition-colors cursor-pointer"
+              className="p-2 text-white hover:border-white md:hidden rounded-full  transition-colors cursor-pointer"
             >
               {mobileMenuOpen ? <X className="w-[22px] h-[22px]" /> : <Menu className="w-[22px] h-[22px]" />}
             </button>
@@ -97,7 +108,7 @@ const Navbar= () => {
 
       {/* Mobile Menu Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-16 bg-black/40 z-40 md:hidden backdrop-blur-xs transition-opacity" onClick={() => setMobileMenuOpen(false)}>
+        <div className="fixed inset-x-0 bottom-0 top-24 bg-black/40 z-40 md:hidden backdrop-blur-xs transition-opacity" onClick={() => setMobileMenuOpen(false)}>
           <div className="absolute top-0 left-0 w-full bg-white border-b border-orange-100 shadow-xl px-4 py-5 space-y-4 flex flex-col transition-all duration-300" onClick={e => e.stopPropagation()}>
             
             {/* Nav links */}

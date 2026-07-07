@@ -21,7 +21,7 @@ function QuikLinks() {
     {carCards.map((card) => (
       <div
         key={card.id}
-        className=" w-[150px] h-[150px] sm:w-[196px] sm:h-[190px]  rounded-[20px] p-5 text-white shadow-md flex flex-col justify-between"
+        className=" w-[150px] h-[150px] sm:w-[290px] sm:h-[240px]  rounded-[20px] p-5 text-white shadow-md flex flex-col justify-between"
         style={{
           background: "linear-gradient(to top right, #FF5722, #B52C00)",
         }}
@@ -30,12 +30,12 @@ function QuikLinks() {
           <img
             src={card.image}
             alt={card.text}
-            className="w-20 h-20 sm:h-25 sm:w-25  object-contain text-lg sm:text-xl"
+            className="w-20 h-20 sm:h-30 sm:w-30   object-contain "
           />
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold leading-tight">
+          <h3 className="text-lg sm:text-2xl mt-[-4] font-semibold leading-tight">
             {card.text}
           </h3>
         </div>

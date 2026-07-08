@@ -63,7 +63,7 @@ function BrowseCars() {
   return (
     <div className="browse-cars-container sm:mx-14 px-4 sm:px-6 lg:px-25 py-10">
       {/* 1) Browse text first */}
-      <p className="text-4xl font-medium text-slate-900 mb-7">Browse Cars</p>
+      <p className="hidden md:flex text-4xl font-medium text-slate-900 mb-7">Browse Cars</p>
 
       {/* 2) categoriesList */}
       <div className="flex flex-wrap gap-8 mb-10">

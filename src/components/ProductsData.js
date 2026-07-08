@@ -8,6 +8,10 @@ const cars = [
   { id: 2, image: car2 },
   { id: 3, image: car3 },
   { id: 4, image: car4 },
+  { id: 5, image: car1 },
+  { id: 6, image: car2 },
+  { id: 7, image: car3 },
+  { id: 8, image: car4 },
 ];
 
 export default cars;

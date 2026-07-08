@@ -5,6 +5,7 @@ import QuikLinks from "./components/QuikLinks";
 import BrowseCars from "./components/BrowseCars";
 import ProductCard from "./components/ProductCard";
 import ProductList from "./components/ProductList";
+import SellingVehicles from "./components/SellingVehicles";
 
 function App(){
   return(
@@ -16,6 +17,7 @@ function App(){
       <BrowseCars/>
      <ProductCard/>
      <ProductList/>
+     <SellingVehicles/>
      </>
   )
 }

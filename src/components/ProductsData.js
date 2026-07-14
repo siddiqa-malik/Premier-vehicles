@@ -10,11 +10,14 @@ import carForSell from "../assets/images/carForSell.png";
 import carBGcircle from "../assets/images/carBGcircle.png";
 import BikeForSell from "../assets/images/BikeForSell.png"
 import tyre from "../assets/images/Tyre.png"
+import reviewCarimg from "../assets/images/reviewCar.png"
+import toyotaImg from "../assets/images/toyota.png"
 
 
 const cars = [
   { id: 1, image: car1, title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -26,6 +29,7 @@ const cars = [
   time: "2 days ago" },
   { id: 2, image: car2, title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -37,6 +41,7 @@ const cars = [
   time: "2 days ago"},
   { id: 3, image: car3, title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -48,6 +53,7 @@ const cars = [
   time: "2 days ago" },
   { id: 4, image: car4, title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -59,6 +65,7 @@ const cars = [
   time: "2 days ago" },
   { id: 5, image: car1, title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -70,6 +77,7 @@ const cars = [
   time: "2 days ago" },
   { id: 6, image: car2,  title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -81,6 +89,7 @@ const cars = [
   time: "2 days ago"},
   { id: 7, image: car3, title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -92,6 +101,7 @@ const cars = [
   time: "2 days ago" },
   { id: 8, image: car4, title:"Toyota corolla 2021", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -106,6 +116,7 @@ const cars = [
 const bikes = [
 {id:1, image:bike1, title:"Honda CB 15OF", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -117,6 +128,7 @@ const bikes = [
   time: "2 days ago"},
 {id:2, image:bike2, title:"Honda CB 15OF", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -128,6 +140,7 @@ const bikes = [
   time: "2 days ago"},
 {id:3, image:bike3, title:"Honda CB 15OF", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -139,6 +152,7 @@ const bikes = [
   time: "2 days ago"},
 {id:4, image:bike4, title:"Honda CB 15OF", location: "Islamabad",
   featured: true,
+  location: true,
   price: "PKR 40.3 lacs",
 
   specs: [
@@ -175,8 +189,9 @@ const AutoParts =[
   image: tyre,
   title: "Michelin Tyre",
 
-  location: "Lahore",
+  
   featured: false,
+  location: true,
   price: "PKR 25,000",
 
   specs: [
@@ -192,8 +207,9 @@ const AutoParts =[
   image: tyre,
   title: "Michelin Tyre",
 
-  location: "Lahore",
+ 
   featured: false,
+  location: true,
   price: "PKR 25,000",
 
   specs: [
@@ -209,8 +225,9 @@ const AutoParts =[
   image: tyre,
   title: "Michelin Tyre",
 
-  location: "Lahore",
+ 
   featured: false,
+  location: true,
   price: "PKR 25,000",
 
   specs: [
@@ -226,8 +243,9 @@ const AutoParts =[
   image: tyre,
   title: "Michelin Tyre",
 
-  location: "Lahore",
+  
   featured: false,
+  location: true,
   price: "PKR 25,000",
 
   specs: [
@@ -243,8 +261,9 @@ const AutoParts =[
   image: tyre,
   title: "Michelin Tyre",
 
-  location: "Lahore",
+ 
   featured: false,
+  location: true,
   price: "PKR 25,000",
 
   specs: [
@@ -258,5 +277,19 @@ const AutoParts =[
 
 ]
 
-export {cars,bikes,bikeBanner,carBanner, AutoParts};
+const reviewCar = [
+  { id: 1,title:"Toyota Corolla" ,image: reviewCarimg, featured: false, location: false, rating: 4, reviews: 409 },
+  { id: 2,title:"Toyota Corolla" ,image: reviewCarimg, featured: false, location: false, rating: 4, reviews: 409 },
+  { id: 3,title:"Toyota Corolla" ,image: reviewCarimg, featured: false, location: false, rating: 4, reviews: 409 },
+  { id: 4,title:"Toyota Corolla" ,image: reviewCarimg, featured: false, location: false, rating: 4, reviews: 409 }
+];
+
+const toyota = [
+  { id: 1, image: toyotaImg, description: "Toyota Corolla 2021 | Owner Review | Premium...", featured: false, location: false },
+  { id: 2, image: toyotaImg, description: "Toyota Corolla 2021 | Owner Review | Premium...", featured: false, location: false },
+  { id: 3, image: toyotaImg, description: "Toyota Corolla 2021 | Owner Review | Premium...", featured: false, location: false },
+  { id: 4, image: toyotaImg, description: "Toyota Corolla 2021 | Owner Review | Premium...", featured: false, location: false }
+];
+
+export { cars, bikes, bikeBanner, carBanner, AutoParts, reviewCar, toyota };
 

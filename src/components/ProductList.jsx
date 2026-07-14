@@ -2,19 +2,20 @@ import { useEffect, useState } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import ProductCard from "./ProductCard";
 
-const ProductList = ({title,products}) => {
+const ProductList = ({title,products , type}) => {
   const [showAll, setShowAll] = useState(false);
   const [visibleCards, setVisibleCards] = useState(4);
   const [startIndex, setStartIndex] = useState(0);
+  const hideNavigation = type === "toyota" || type === "autopart";
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 1000 ) {
         setVisibleCards(2);
       } else {
         setVisibleCards(4);
       }
-    };
+      };
 
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -39,8 +40,8 @@ const ProductList = ({title,products}) => {
   };
 
   return (
-    <div className="sm:mx-14 px-4 sm:px-6 lg:px-25 py-10">
-    <div className=" flex justify-between items-center mb-8  ">
+    <div className="mx-3 sm:mx-14 md:mx-2 lg:mx-3 px-4 sm:px-6 lg:px-8 py-10">
+    <div className=" flex justify-between items-center mb-8 lg:mx-14 px-4 sm:px-6 lg:px-10 py-10  ">
         <h2 className="text:xl sm:text-4xl mb-[-25px] sm:mb-0 font-medium">{title}</h2>
 
         <button
@@ -54,10 +55,10 @@ const ProductList = ({title,products}) => {
 
       <div className="relative">
         {/* Left Button */}
-        {!showAll && (
+        {!showAll && !hideNavigation && (
           <button
             onClick={prevSlide}
-            className="hidden md:flex absolute left-[-20px] top-65 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-md shadow-lg  flex items-center justify-center"
+            className="hidden md:flex absolute left-[-20px] lg:mx-20  top-65 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-md shadow-lg  flex items-center justify-center"
           >
             <ChevronLeft 
              size={30}
@@ -66,17 +67,17 @@ const ProductList = ({title,products}) => {
         )}
 
         {/* Cards */}
-        <div className="flex justify-center gap-6 flex-wrap ">
+        <div className="flex justify-center gap-6  ">
           {displayedProducts.map((product) => (
-            <ProductCard key={product.id} product={product}  />
+            <ProductCard key={product.id} product={product} type={type} />
           ))}
         </div>
 
         {/* Right Button */}
-        {!showAll && (
+        {!showAll && !hideNavigation && (
           <button
             onClick={nextSlide}
-            className="hidden md:flex absolute right-[-20px]  top-65 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-xs shadow-lg flex items-center justify-center"
+            className="hidden md:flex absolute md:right-[-20px] lg:mx-20  top-65 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-xs shadow-lg flex items-center justify-center"
           >
             <ChevronRight
             size={30}  

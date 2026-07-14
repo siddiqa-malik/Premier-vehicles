@@ -6,7 +6,11 @@ import BrowseCars from "./components/BrowseCars";
 import ProductCard from "./components/ProductCard";
 import ProductList from "./components/ProductList";
 import SellingVehicles from "./components/SellingVehicles";
-import {cars , bikes , carBanner, bikeBanner, AutoParts} from "./components/ProductsData"
+import { cars, bikes, carBanner, bikeBanner, AutoParts, reviewCar, toyota } from "./components/ProductsData"
+import WhyChooseSection from "./components/WhyChooseSection"
+import InfoCard from "./components/InfoCard"
+import FuelPriceSection  from "./components/FuelPriceSection"
+import FuelCard from "./components/FuelCard"
 
 function App(){
   return(
@@ -16,34 +20,58 @@ function App(){
       <Hero />
       <QuikLinks/>
       <BrowseCars/>
-     <ProductCard/>
-     <ProductList
-    title="Featured Cars"
-    products={cars}
+   <ProductList
+  title="Featured Cars"
+  products={cars}
+  type="car"
 />
+
 <div className="block md:hidden">
-<ProductList
+  <ProductList
     title="Recently added"
     products={cars}
-    
-    
-/></div>
+    type="car"
+  />
+</div>
 
-     <SellingVehicles {...carBanner} />
+<SellingVehicles {...carBanner} />
 
-     <div className="hidden md:block">
-<ProductList
+<div className="hidden md:block">
+  <ProductList
     title="Featured Bikes"
     products={bikes}
-/></div>
+    type="bike"
+  />
+</div>
+
 <div className="hidden md:block">
-<SellingVehicles {...bikeBanner} /></div>
+  <SellingVehicles {...bikeBanner} />
+</div>
+
 <ProductList
-    title="Featured Cars"
-    products={AutoParts}
+  title="Recent Auto Parts"
+  products={AutoParts}
+  type="autopart"
 />
 
+<div className="hidden md:block">
+ <WhyChooseSection />
+</div>
+ <ProductList
+  title="Popular Reviewed Cars"
+  products={reviewCar}
+  type="review"
+/>
+<div className="block md:hidden">
+<FuelPriceSection />
+</div>
 
+
+ <ProductList
+  title="Toyota"
+  products={toyota}
+  type="toyota"
+/>
      </>
   )
 }

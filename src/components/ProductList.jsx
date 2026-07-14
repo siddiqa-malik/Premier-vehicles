@@ -6,22 +6,28 @@ const ProductList = ({title,products , type}) => {
   const [showAll, setShowAll] = useState(false);
   const [visibleCards, setVisibleCards] = useState(4);
   const [startIndex, setStartIndex] = useState(0);
-  const hideNavigation = type === "toyota" || type === "autopart";
+  const hideNavigation = type === "toyota" || type === "review";
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 1000 ) {
-        setVisibleCards(2);
-      } else {
-        setVisibleCards(4);
-      }
-      };
+ useEffect(() => {
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  const updateCards = () => {
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    if (window.innerWidth < 768) {
+      setVisibleCards(1);
+    } 
+    else {
+      setVisibleCards(4);
+    }
+
+  };
+
+  updateCards();
+
+  window.addEventListener("resize", updateCards);
+
+  return () => window.removeEventListener("resize", updateCards);
+
+}, []);
 
   const displayedProducts = showAll
     ? products
@@ -58,7 +64,7 @@ const ProductList = ({title,products , type}) => {
         {!showAll && !hideNavigation && (
           <button
             onClick={prevSlide}
-            className="hidden md:flex absolute left-[-20px] lg:mx-20  top-65 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-md shadow-lg  flex items-center justify-center"
+            className=" absolute left-1    lg:mx-20 top-40  sm:top-55 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-md shadow-lg  flex items-center justify-center"
           >
             <ChevronLeft 
              size={30}
@@ -67,7 +73,7 @@ const ProductList = ({title,products , type}) => {
         )}
 
         {/* Cards */}
-        <div className="flex justify-center gap-6  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:mx-20 gap-6 justify-items-center">
           {displayedProducts.map((product) => (
             <ProductCard key={product.id} product={product} type={type} />
           ))}
@@ -77,7 +83,7 @@ const ProductList = ({title,products , type}) => {
         {!showAll && !hideNavigation && (
           <button
             onClick={nextSlide}
-            className="hidden md:flex absolute md:right-[-20px] lg:mx-20  top-65 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-xs shadow-lg flex items-center justify-center"
+            className=" absolute sm:right-1  right-0 lg:mx-20 top-40 sm:top-55 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-xs shadow-lg flex items-center justify-center"
           >
             <ChevronRight
             size={30}  

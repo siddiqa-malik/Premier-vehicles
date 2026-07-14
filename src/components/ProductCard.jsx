@@ -6,7 +6,7 @@ const ProductCard = ({ product , type }) => {
   if (!product) return null;
 
   return (
-    <div className="md:w-[25%] lg:w-[21%] bg-[#F8FAFC] rounded-2xl shadow-sm border overflow-hidden border-gray-100 font-sans relative group select-none">
+    <div className="w-[354px] sm:w-full  bg-[#F8FAFC] rounded-2xl shadow-sm border overflow-hidden border-gray-100 font-sans relative group select-none">
     
       
 
@@ -22,8 +22,8 @@ const ProductCard = ({ product , type }) => {
     transition-transform duration-300 group-hover:scale-105
     ${
       type === "review"
-        ? "w-[95%] h-[70%] object-contain mx-auto mt-1"
-        : "w-full h-full object-cover"
+        ? " sm:w-[95%] h-[85%] object-contain mx-auto mt-2"
+        : " lg:w-full h-full object-cover"
     }
   `}
 />

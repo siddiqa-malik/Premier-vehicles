@@ -11,6 +11,7 @@ import WhyChooseSection from "./components/WhyChooseSection"
 import InfoCard from "./components/InfoCard"
 import FuelPriceSection  from "./components/FuelPriceSection"
 import FuelCard from "./components/FuelCard"
+import Footer from "./components/Footer"
 
 function App(){
   return(
@@ -72,6 +73,8 @@ function App(){
   products={toyota}
   type="toyota"
 />
+
+<Footer/>
      </>
   )
 }

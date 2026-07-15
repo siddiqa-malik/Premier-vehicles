@@ -16,12 +16,12 @@ function QuikLinks() {
   ];
 
   return (
-    <section className=" lg:mx-20 bg-white px-4  sm:px-6 lg:px-4 mt-10">
-  <div className=" mt-10 flex w-full  flex-wrap flex-row justify-center gap-2 sm:gap-5 mb-5 sm:mb-20 lg:flex-nowrap lg:justify-center">
+    <section className=" lg:mx-33 bg-white px-4  sm:px-6 lg:px-4 mt-10">
+  <div className=" mt-10  w-full gap-2 sm:gap-5 mb-5 sm:mb-20 grid grid-cols-2  md:grid-cols-3 lg:grid-cols-6 ">
     {carCards.map((card) => (
       <div
         key={card.id}
-        className=" w-[185px] h-[180px] sm:w-[290px] sm:h-[240px]  rounded-[20px] p-5 text-white shadow-md flex flex-col justify-between"
+        className=" w-[185px] h-[180px] md:w-[270px] md:h-[210px] lg:w-[290px] lg:h-[240px]  rounded-[20px] p-5 text-white shadow-md flex flex-col justify-between"
         style={{
           background: "linear-gradient(to top right, #FF5722, #B52C00)",
         }}

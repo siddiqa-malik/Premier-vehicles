@@ -6,7 +6,7 @@ const ProductList = ({title,products , type}) => {
   const [showAll, setShowAll] = useState(false);
   const [visibleCards, setVisibleCards] = useState(4);
   const [startIndex, setStartIndex] = useState(0);
-  const hideNavigation = type === "toyota" || type === "review";
+  const hideNavigation = type === "toyota";
 
  useEffect(() => {
 
@@ -46,8 +46,8 @@ const ProductList = ({title,products , type}) => {
   };
 
   return (
-    <div className="mx-3 sm:mx-14 md:mx-2 lg:mx-3 px-4 sm:px-6 lg:px-8 py-10">
-    <div className=" flex justify-between items-center mb-8 lg:mx-14 px-4 sm:px-6 lg:px-10 py-10  ">
+    <div className="mx-2 sm:mx-20 md:mx-2 lg:mx-3 px-4   sm:px-6 lg:px-8 py-10">
+    <div className=" flex justify-between items-center mb-8 -mt-16 lg:mt-0 lg:mx-20 px-4 sm:px-6 lg:px-10 py-10  ">
         <h2 className="text:xl sm:text-4xl mb-[-25px] sm:mb-0 font-medium">{title}</h2>
 
         <button
@@ -73,7 +73,7 @@ const ProductList = ({title,products , type}) => {
         )}
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:mx-20 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:mx-28 gap-6 -mt-6 lg:mt-0 justify-items-center">
           {displayedProducts.map((product) => (
             <ProductCard key={product.id} product={product} type={type} />
           ))}

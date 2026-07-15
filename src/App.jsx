@@ -12,6 +12,7 @@ import InfoCard from "./components/InfoCard"
 import FuelPriceSection  from "./components/FuelPriceSection"
 import FuelCard from "./components/FuelCard"
 import Footer from "./components/Footer"
+import AppBanner from "./components/AppBanner"
 
 function App(){
   return(
@@ -63,17 +64,21 @@ function App(){
   products={reviewCar}
   type="review"
 />
+
+<AppBanner/>
+
 <div className="block md:hidden">
 <FuelPriceSection />
 </div>
 
-
+<div className="-mt-20 mb-20">
  <ProductList
+ 
   title="Toyota"
   products={toyota}
   type="toyota"
 />
-
+</div>
 <Footer/>
      </>
   )

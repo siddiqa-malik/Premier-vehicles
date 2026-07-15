@@ -6,7 +6,7 @@ const ProductCard = ({ product , type }) => {
   if (!product) return null;
 
   return (
-    <div className="w-[354px] sm:w-full  bg-[#F8FAFC] rounded-2xl shadow-sm border overflow-hidden border-gray-100 font-sans relative group select-none">
+    <div className="w-[334px] lg:w-full  bg-[#F8FAFC] rounded-2xl shadow-sm border overflow-hidden border-gray-100 font-sans relative group select-none">
     
       
 
@@ -14,15 +14,15 @@ const ProductCard = ({ product , type }) => {
       
 
       {/* Upper Image Section */}
-      <div className="relative h-[150px] sm:h-[270px] lg:h-[230px] w-full overflow-hidden">
+      <div className="relative h-[180px] sm:h-[270px] lg:h-[230px]   overflow-hidden">
         <img
   src={product.image}
   alt={product.title}
   className={`
-    transition-transform duration-300 group-hover:scale-105
+    transition-transform duration-300 w-[400px] group-hover:scale-105
     ${
       type === "review"
-        ? " sm:w-[95%] h-[85%] object-contain mx-auto mt-2"
+        ? " sm:w-[95%] h-[88%]  object-contain mx-auto mt-4 lg:mt-0"
         : " lg:w-full h-full object-cover"
     }
   `}
@@ -62,9 +62,9 @@ const ProductCard = ({ product , type }) => {
     p-4 bg-[#F8FAFC] flex flex-col justify-between
     ${
       type === "review"
-        ? "h-[90px] sm:h-[110px]"
+        ? "h-[100px] sm:h-[120px] lg:-mt-8"
         : type === "toyota"
-        ? "h-[90px] sm:h-[110px]"
+        ? "h-[90px] sm:h-[110px] -mt-8"
         : "h-[140px] sm:h-[200px] lg:h-[170px]"
     }
   `}

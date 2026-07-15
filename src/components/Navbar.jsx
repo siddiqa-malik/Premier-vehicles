@@ -43,7 +43,7 @@ const Navbar= () => {
           <div className="flex min-w-0 items-center gap-4 lg:gap-12">
             <div className="flex items-center gap-2">
               <Link to="/" className="flex items-center gap-2 transition-transform hover:scale-101">
-                <img src={logo} alt="Logo" className="w-[52px] h-auto md:w-[60px]" />
+                <img src={logo} alt="Logo" className="w-[52px] h-auto md:w-[80px] " />
               </Link>
             </div>
             </div>

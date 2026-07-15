@@ -61,7 +61,7 @@ function BrowseCars() {
   }, [products, selectedCategory]);
 
   return (
-    <div className="browse-cars-container sm:mx-14 px-4 sm:px-6 lg:px-25 py-10">
+    <div className="browse-cars-container mx-2 sm:mx-14 px-4 sm:px-6 lg:px-25 py-10">
       {/* 1) Browse text first */}
       <p className="hidden md:flex text-4xl font-medium text-slate-900 mb-7">Browse Cars</p>
 
@@ -88,7 +88,7 @@ function BrowseCars() {
       </div>
 
       {/* 3) products shown only for active category */}
-      <div className="grid grid-cols-4  sm:grid-cols-6 gap-4 sm:gap-8">
+      <div className="grid grid-cols-3  sm:grid-cols-6 gap-4 sm:gap-8">
         {filteredProducts.map((p) => (
           <div key={p.id} className="flex items-center justify-center">
             <img

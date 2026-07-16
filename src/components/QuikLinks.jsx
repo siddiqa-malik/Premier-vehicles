@@ -17,11 +17,11 @@ function QuikLinks() {
 
   return (
     <section className="  bg-white px-4  sm:px-6 lg:px-4 mt-10">
-  <div className=" mt-10 mx-3 xl:mx-25 lg:mx-10 md:mx-10 gap-2 sm:gap-5 mb-5 sm:mb-20 grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
+  <div className=" mt-10 mx-3 xl:mx-28 lg:mx-10 md:mx-10 gap-2 sm:gap-5 mb-5 sm:mb-20 grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
     {carCards.map((card) => (
       <div
         key={card.id}
-        className=" w-[175px] h-[170px] md:w-[95%] md:h-[220px] lg:w-[290px] lg:h-[290px]  xl:w-[210px] xl:h-[210px] rounded-[20px] p-5 text-white shadow-md flex flex-col justify-between"
+        className=" w-[175px] h-[170px] md:w-[95%] md:h-[220px] lg:w-[290px] lg:h-[290px]  xl:w-[280px] xl:h-[280px] rounded-[20px] p-5 text-white shadow-md flex flex-col justify-between"
         style={{
           background: "linear-gradient(to top right, #FF5722, #B52C00)",
         }}
@@ -30,7 +30,7 @@ function QuikLinks() {
           <img
             src={card.image}
             alt={card.text}
-            className="w-20 h-20 sm:h-30 sm:w-30   object-contain "
+            className="w-20 h-20 sm:h-40 sm:w-40   object-contain "
           />
         </div>
 

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import carlogo1 from "../assets/images/carLogo1.png";
+import carlogo1 from "../assets/images/carlogo1.png";
 import carlogo2 from "../assets/images/carlogo2.png";
 import carlogo3 from "../assets/images/carlogo3.png";
 import carlogo4 from "../assets/images/carlogo4.png";

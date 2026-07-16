@@ -3,8 +3,8 @@ import { useState } from "react";
 import heroImage from "../assets/images/hero.png";
 import { Search, SlidersHorizontal, ChevronDown } from 'lucide-react';
 import PlaylistCard from "../assets/images/playlistCard.png";
-import NewsCard from "../assets/images/newsCard.png";
-import LocationCard from "../assets/images/locationCard.png";
+import NewsCard from "../assets/images/NewsCard.png";
+import LocationCard from "../assets/images/LocationCard.png";
 
 export const Hero = () => {
   

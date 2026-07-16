@@ -3,9 +3,9 @@ import { fuelPrices } from "./FuelPricesData";
 
 const FuelPriceSection = () => {
   return (
-    <section className="px-4 mb-18 -mt-18 lg:mt-0 sm:px-8 lg:px-24 py-16">
+    <section className="px-4 mb-18 mx-6 -mt-18 lg:mt-0 sm:px-8 lg:px-24 py-16">
 
-      <h2 className="text-3xl font-semibold mb-8">
+      <h2 className="text-xl font-bold mb-8">
         Current Fuel Prices
       </h2>
 

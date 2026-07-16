@@ -8,17 +8,18 @@ const ProductList = ({title,products , type}) => {
   const [startIndex, setStartIndex] = useState(0);
   const hideNavigation = type === "toyota";
 
- useEffect(() => {
-
+useEffect(() => {
   const updateCards = () => {
-
     if (window.innerWidth < 768) {
+      // Mobile
       setVisibleCards(1);
-    } 
-    else {
+    } else if (window.innerWidth <= 1024) {
+      // Tablet
+      setVisibleCards(2);
+    } else {
+      // Desktop
       setVisibleCards(4);
     }
-
   };
 
   updateCards();
@@ -26,7 +27,6 @@ const ProductList = ({title,products , type}) => {
   window.addEventListener("resize", updateCards);
 
   return () => window.removeEventListener("resize", updateCards);
-
 }, []);
 
   const displayedProducts = showAll
@@ -46,8 +46,8 @@ const ProductList = ({title,products , type}) => {
   };
 
   return (
-    <div className="mx-2 sm:mx-20 md:mx-2 lg:mx-3 px-4   sm:px-6 lg:px-8 py-10">
-    <div className=" flex justify-between items-center mb-8 -mt-16 lg:mt-0 lg:mx-20 px-4 sm:px-6 lg:px-10 py-10  ">
+    <div className="mx-4 sm:mx-20 md:mx-2 lg:-mx-12 xl:-mx-2 px-4   sm:px-6 lg:px-8 py-10">
+    <div className=" flex justify-between items-center mb-8 lg:mb-2 -mt-16  lg:mt-0 lg:mx-20 px-4 sm:px-6 lg:px-10 py-10  ">
         <h2 className="text:xl sm:text-4xl mb-[-25px] sm:mb-0 font-medium">{title}</h2>
 
         <button
@@ -73,7 +73,7 @@ const ProductList = ({title,products , type}) => {
         )}
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:mx-28 gap-6 -mt-6 lg:mt-0 justify-items-center">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 lg:mx-28 gap-6 -mt-6 lg:mt-0 justify-items-center">
           {displayedProducts.map((product) => (
             <ProductCard key={product.id} product={product} type={type} />
           ))}

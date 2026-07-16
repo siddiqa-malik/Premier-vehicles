@@ -7,7 +7,7 @@ const FuelCard = ({ item }) => {
         {item.name}
       </p>
 
-      <h3 className="mt-3 text-3xl font-bold text-gray-900">
+      <h3 className="mt-3 text-2xl font-bold text-gray-900">
         {item.price}
         <span className="text-lg ml-2 font-medium">
           PKR

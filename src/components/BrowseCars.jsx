@@ -61,7 +61,7 @@ function BrowseCars() {
   }, [products, selectedCategory]);
 
   return (
-    <div className="browse-cars-container mx-2 sm:mx-14 px-4 sm:px-6 lg:px-25 py-10">
+    <div className="browse-cars-container mx-4 lg:mx-0 xl:mx-6 px-4 sm:px-6 lg:px-25 py-10">
       {/* 1) Browse text first */}
       <p className="hidden md:flex text-4xl font-medium text-slate-900 mb-7">Browse Cars</p>
 
@@ -75,7 +75,7 @@ function BrowseCars() {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={
-                "pb-3 text-sm font-semibold tracking-wide capitalize transition-colors cursor-pointer " +
+                "pb-3 text-sm sm:text-md lg:text-xl xl:text-2xl  font-semibold tracking-wide capitalize transition-colors cursor-pointer " +
                 (isActive
                   ? "text-[#2563eb] border-b-4 border-[#2563eb]"
                   : "text-black/60 hover:text-black border-b-4 border-transparent")
@@ -88,7 +88,7 @@ function BrowseCars() {
       </div>
 
       {/* 3) products shown only for active category */}
-      <div className="grid grid-cols-3  sm:grid-cols-6 gap-4 sm:gap-8">
+      <div className="grid grid-cols-3 md:grid-cols-3  lg:grid-cols-6 gap-4 sm:gap-8">
         {filteredProducts.map((p) => (
           <div key={p.id} className="flex items-center justify-center">
             <img

@@ -6,7 +6,7 @@ import mobile from "../assets/images/mobile.png"
 
 function AppBanner (){
 return(
-<section className=" -mt-10 lg:mt-15 px-2 sm:px-6 lg:px-10 py-24">
+<section className=" -mt-10 lg:mt-15 px-2 sm:px-6 lg:px-18 py-24">
   <div className=" relative  ">
 
     {/* Blue Background */}

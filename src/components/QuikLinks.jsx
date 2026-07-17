@@ -17,7 +17,7 @@ function QuikLinks() {
 
   return (
     <section className="  bg-white px-4  sm:px-6 lg:px-4 mt-10">
-  <div className=" mt-10  gap-2 sm:gap-5 mb-5 sm:mb-20 grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
+  <div className=" mt-10 lg:mx-16 gap-2 sm:gap-5 mb-5 sm:mb-20 grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 ">
     {carCards.map((card) => (
       <div
         key={card.id}
@@ -37,7 +37,7 @@ function QuikLinks() {
           <img
             src={card.image}
             alt={card.text}
-            className="w-20 h-20 sm:h-40 sm:w-40   object-contain "
+            className="w-20 h-20 sm:h-30 sm:w-30   object-contain "
           />
         </div>
 

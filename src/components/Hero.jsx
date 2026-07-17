@@ -41,7 +41,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-sm sm:text-lg lg:text-xl font-normal  leading-relaxed max-w-lg">
-           <span className="block text-left">Find information about the latest cars in the market.</span>
+           <span className="block text-center sm:text-left">Find information about the latest cars in the market.</span>
           </p>
 </div>      
       

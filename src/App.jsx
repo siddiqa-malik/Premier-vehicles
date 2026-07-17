@@ -16,7 +16,7 @@ import AppBanner from "./components/AppBanner"
 
 function App(){
   return(
-    <main className="overflow-y-hidden">
+    <main className="overflow-y-hidden app-shell">
       <Navbar />
       {/* <Test/> */}
       <Hero />
@@ -71,14 +71,14 @@ function App(){
 <FuelPriceSection />
 </div>
 
-{/* <div className="-mt-20 mb-20">
+<div className="-mt-20 mb-20">
  <ProductList
  
   title="Toyota"
   products={toyota}
   type="toyota"
 />
-</div> */}
+</div>
 <Footer/>
      </main>
   )

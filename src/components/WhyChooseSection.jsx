@@ -3,7 +3,7 @@ import { whyChooseData } from "./WhyChooseData";
 
 const WhyChooseSection = () => {
   return (
-    <section className="w-full sm:px-8 lg:px-24 py-16">
+    <section className="w-full sm:px-8 lg:px-18 py-16">
 
       <h2 className="text-4xl font-semibold mb-10">
         Why Choose Us?

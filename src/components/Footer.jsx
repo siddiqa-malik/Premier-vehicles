@@ -19,9 +19,9 @@ function Footer() {
     <footer className="bg-[#404040] flex flex-col items-center text-white">
 
       {/* Main Container */}
-      <div className="w-[90%]  px-6 py-14 ">
+      <div className="w-[90%] px-2 sm:px-4 py-14 ">
 
-        <div className="w-full mx-auto px-6 py-14">
+        <div className="w-full mx-auto px-4 py-14">
 
   {/* ================= TOP ================= */}
 
@@ -58,7 +58,7 @@ function Footer() {
 
     {/* ================= BRANDS ================= */}
 
-    <div className="order-2 lg:order-1">
+    <div className="order-2  lg:order-1">
 
       <h3 className="font-semibold mb-4">
         Cars By Brand

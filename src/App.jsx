@@ -13,7 +13,6 @@ import FuelPriceSection  from "./components/FuelPriceSection"
 import FuelCard from "./components/FuelCard"
 import Footer from "./components/Footer"
 import AppBanner from "./components/AppBanner"
-import 
 
 function App(){
   return(

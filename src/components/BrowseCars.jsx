@@ -61,7 +61,7 @@ function BrowseCars() {
   }, [products, selectedCategory]);
 
   return (
-    <div className="browse-cars-container mx-4 lg:mx-0 xl:mx-6 px-4 sm:px-6 lg:px-25 py-10">
+    <div className="browse-cars-container w-full px-4 sm:px-6 lg:px-25 py-10">
       {/* 1) Browse text first */}
       <p className="hidden md:flex text-4xl font-medium text-slate-900 mb-7">Browse Cars</p>
 

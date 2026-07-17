@@ -12,7 +12,9 @@ export const Hero = () => {
   
 
   return (
-    <section className="relative w-full sm:min-h-[889px] min-h-[1126px] lg:h-[80vh] pt-30 flex items-center overflow-hidden mb-5 ">
+    <section style={
+      {}
+    } className="relative w-full sm:min-h-[889px] min-h-[1126px] lg:h-[80vh] pt-30 flex items-center overflow-hidden mb-5 ">
       
       {/* Hero background image with parallax feel */}
       <div className="absolute inset-0 z-0">
@@ -35,7 +37,7 @@ export const Hero = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
             Find New & Used Cars
  <br />
-          <span className="block text-left">in Pakistan.</span> 
+          <span className="block text-center sm:text-left">in Pakistan.</span> 
           </h1>
 
           <p className="text-sm sm:text-lg lg:text-xl font-normal  leading-relaxed max-w-lg">

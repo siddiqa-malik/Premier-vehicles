@@ -44,10 +44,11 @@ useEffect(() => {
       setStartIndex(startIndex - 1);
     }
   };
-
+// lg:-mx-12 xl:-mx-2 sm:mx-20 
   return (
-    <div className="mx-4 sm:mx-20 md:mx-2 lg:-mx-12 xl:-mx-2 px-4   sm:px-6 lg:px-8 py-10">
-    <div className=" flex justify-between items-center mb-8 lg:mb-2 -mt-16  lg:mt-0 lg:mx-20 px-4 sm:px-6 lg:px-10 py-10  ">
+    // <div>
+        <div className="  px-4   sm:px-6 lg:px-4 py-10">
+    <div className=" flex justify-between items-center mb-8 lg:mb-2 -mt-16  lg:mt-0 lg:mx-6 px-4 sm:px-6 lg:px-10 py-10  ">
         <h2 className="text:xl sm:text-4xl mb-[-25px] sm:mb-0 font-medium">{title}</h2>
 
         <button
@@ -64,7 +65,7 @@ useEffect(() => {
         {!showAll && !hideNavigation && (
           <button
             onClick={prevSlide}
-            className=" absolute left-1    lg:mx-20 top-40  sm:top-55 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-md shadow-lg  flex items-center justify-center"
+            className=" absolute left-1   top-40  sm:top-55 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-md shadow-lg  flex items-center justify-center"
           >
             <ChevronLeft 
              size={30}
@@ -73,7 +74,7 @@ useEffect(() => {
         )}
 
         {/* Cards */}
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 lg:mx-28 gap-6 -mt-6 lg:mt-0 justify-items-center">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:mx-12 gap-6 -mt-6 lg:mt-0 justify-center">
           {displayedProducts.map((product) => (
             <ProductCard key={product.id} product={product} type={type} />
           ))}
@@ -83,7 +84,7 @@ useEffect(() => {
         {!showAll && !hideNavigation && (
           <button
             onClick={nextSlide}
-            className=" absolute sm:right-1  right-0 lg:mx-20 top-40 sm:top-55 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-xs shadow-lg flex items-center justify-center"
+            className=" absolute sm:right-1  right-0  top-40 sm:top-55 -translate-y-1/2 z-10 w-15 h-15 rounded-full bg-white/40 backdrop-blur-xs shadow-lg flex items-center justify-center"
           >
             <ChevronRight
             size={30}  

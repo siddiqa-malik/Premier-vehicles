@@ -12,7 +12,7 @@ function SellingVehicles({
   return (
     <div className=" sm:top-0 px-4 sm:px-6 lg:px-25 py-10">
       {/* Main Container Carousel Slider Box */}
-      <div className="   flex flex-col-reverse  mx-6 sm:mx-14 lg:-mx-2 xl:mx-8 relative bg-[#1e5ae6] text-white rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center justify-between min-h-[500px] sm:before:content-[''] sm:before:absolute sm:before:left-0 sm:before:top-1/2 sm:before:-translate-y-1/2 sm:before:w-12 sm:before:h-24 sm:before:bg-white sm:before:rounded-r-full sm:before:z-10 sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:w-12 sm:after:h-24 after:bg-white after:rounded-l-full after:z-10">
+      <div className="   flex flex-col-reverse  w-full relative bg-[#1e5ae6] text-white rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center justify-between min-h-[500px] sm:before:content-[''] sm:before:absolute sm:before:left-0 sm:before:top-1/2 sm:before:-translate-y-1/2 sm:before:w-12 sm:before:h-24 sm:before:bg-white sm:before:rounded-r-full sm:before:z-10 sm:after:content-[''] sm:after:absolute sm:after:right-0 sm:after:top-1/2 sm:after:-translate-y-1/2 sm:after:w-12 sm:after:h-24 after:bg-white after:rounded-l-full after:z-10">
         
         {/* Left Button - Exact center of the left white semi-circle */}
         <button className="hidden md:flex absolute -left-10 top-1/2 -translate-y-1/2 z-20 w-20 h-20 rounded-full bg-white shadow-lg items-center justify-center text-[#1e5ae6] hover:bg-gray-100 transition-all duration-200">

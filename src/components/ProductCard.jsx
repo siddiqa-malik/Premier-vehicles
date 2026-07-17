@@ -6,7 +6,7 @@ const ProductCard = ({ product , type }) => {
   if (!product) return null;
 
   return (
-    <div className="w-[334px] lg:w-full  bg-[#F8FAFC] rounded-2xl shadow-sm border overflow-hidden border-gray-100 font-sans relative group select-none">
+    <div className="w-full  bg-[#F8FAFC] rounded-2xl shadow-sm border overflow-hidden border-gray-100 font-sans relative group select-none">
     
       
 

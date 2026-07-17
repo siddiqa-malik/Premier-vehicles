@@ -30,14 +30,14 @@ function SellingVehicles({
             <p className="text-sm md:text-base font-medium tracking-wide opacity-90">
               {subtitle}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h2 className="text-center sm:text-left text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
               {title}
             </h2>
             <p className="text-center sm:text-left text-sm md:text-base opacity-85 max-w-lg">
               {description}
             </p>
             <div className="pt-2">
-              <button className="bg-white text-[#1e5ae6] font-semibold sm:px-4 sm:py-2 lg:px-8 lg:py-3 rounded-md hover:bg-gray-200 transition-all duration-200 shadow-md text-sm md:text-base">
+              <button className="bg-white text-[#1e5ae6] font-semibold px-8 py-3 sm:px-4 sm:py-2 lg:px-8 lg:py-3 rounded-md hover:bg-gray-200 transition-all duration-200 shadow-md text-sm md:text-base">
                 {buttonText}
               </button>
             </div>
